@@ -1,0 +1,47 @@
+﻿
+@model UserModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>    
+        $(".input_text").focus(function () {
+            $(this).prev('.fa').addclass('glowIcon')
+        })
+        $(".input_text").focusout(function () {
+            $(this).prev('.fa').removeclass('glowIcon')
+        })
+    </script>
+    <title>Animated Login From</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link rel="stylesheet" href="~/css/css1.css" />
+</head>
+<body>
+    <form asp-controller="Home" asp-action="login" method="post">
+        <div class="login_form_container">
+            <div class="login_form">
+                <h2>Login</h2>
+                <div class="input_group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="input_text" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="input_group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="input_text" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+
+                </div>
+                <div class="button_group" id="login_button">
+                    <input id="start" type="submit" value="Login" />
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>

@@ -1,0 +1,14 @@
+﻿using System.Text.RegularExpressions;
+
+namespace Management.Web.Transformers
+{
+    public class SlugTransformer 
+    {
+        //public string? TransformOutbound(object? value)
+        //{
+        //    if (value is not string)
+        //        return null;
+        //    return Regex.Replace(value.ToString()!, @"[^a-zA-Z0-9]+", "-", RegexOptions.CultureInvariant, TimeSpan.FromMilliseconds(200)).ToLower().Trim('-');
+        //}
+    }
+}
